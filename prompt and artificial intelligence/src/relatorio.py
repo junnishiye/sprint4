@@ -3,7 +3,6 @@
 Prioridade de fontes:
 1. CSV/JSON originais produzidos pelo Colab (quando copiados para resultados/).
 2. Resumo explicitamente rotulado como TRANSCRIÇÃO DAS CAPTURAS do Colab.
-Não converte notas de juiz LLM da Sprint 03 em avaliações humanas.
 """
 import csv
 import json
