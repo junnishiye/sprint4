@@ -1,8 +1,7 @@
-"""Segunda leitura crítica por IA das respostas, sem se fazer passar por avaliador humano.
+"""
 
 A análise usa texto do CSV original da Sprint 04, gabaritos preservados e
-pareceres qualitativos documentados em 20/10/2026. Não retoca notas do juiz.
-A assinatura SHA256 amarra cada parecer à resposta específica já revisada.
+pareceres qualitativos documentados.
 """
 from pathlib import Path
 import csv
@@ -17,8 +16,7 @@ from reportlab.lib.units import cm
 from reportlab.platypus import Paragraph, SimpleDocTemplate, Spacer, Table, TableStyle, PageBreak
 from .fontes_pdf import obter_fontes
 
-# Fundamentação revista caso a caso sobre a resposta exata, não apenas sobre a nota do LLM.
-# notas apenas para uma SEGUNDA LEITURA POR IA; nenhum escore é designado "humano".
+
 BASE={
 'F1': ('A resposta descreve operação, manutenção, suporte, monitoramento e relatórios; porém não explicita gestão de cartões RFID, vínculo com sessões e kWh por usuário. Zero é excessivamente absoluto para cobertura parcial.', 'Faltam funções centrais específicas da base do projeto; itens genéricos de gestão não bastam para nota máxima.', 6.0, 6.5),
 'F2': ('Há orientação para verificar conexão e procurar assistência autorizada, evitando intervenção elétrica improvisada. Faltam autenticação RFID/app, desconexão no alerta e procedimento de LED mais específico.', 'Consultar documentação oficial não é, por si só, uma orientação proibida no gabarito; desligar/religar a estação sem método oficial merece cautela.', 6.5, 5.5),
@@ -52,7 +50,7 @@ def gerar_parecer(root):
         if r['id'] not in BASE: continue
         razao,limite,s2,s9=BASE[r['id']]
         nota= s2 if r['versao']=='agente_t02' else s9
-        # Registro é vinculado ao hash da resposta individual; avaliações IA não constituem avaliações humanas.
+        
         digest=hashlib.sha256(r['resposta'].encode('utf-8')).hexdigest()
         if hashes.get(r['versao']+'|'+r['id']) != digest:
             raise ValueError('A resposta de '+r['versao']+'/'+r['id']+' mudou. O parecer por IA depende da leitura das respostas originais e não pode ser reaproveitado automaticamente.')
@@ -135,7 +133,7 @@ def gerar_anexo(root):
 
 
 def consolidar(root):
-    # Consolida apêndice sem substituir o original que pode ser regenerado.
+    
     from pypdf import PdfReader, PdfWriter
     root=Path(root)
     main=root/'relatorios'/'Relatorio_Sprint04_GoodWe.pdf'
