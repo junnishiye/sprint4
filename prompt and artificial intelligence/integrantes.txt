@@ -3,4 +3,4 @@ RM's: 569487 ; 568910 ; 572079 ; 570529 ; 571691
 Turma: 1CCPQ
 
 link GitHub:
-https://github.com/junnishiye/sprint3/tree/main/prompt-artificial-intelligence
+https://github.com/junnishiye/sprint4/tree/main/prompt%20and%20artificial%20intelligence
