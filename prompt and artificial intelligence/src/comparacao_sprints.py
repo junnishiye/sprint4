@@ -1,7 +1,7 @@
 """Confronto quantitativo auditavel entre juizes AUTOMATICOS das Sprints 03/04.
 
-Nao descreve as notas da Sprint03 como manuais/humanas.
-So compara casos da Sprint03 com novas notas quando existe CSV original da execucao.
+
+Compara casos da Sprint03 com novas notas quando existe CSV original da execucao.
 """
 import csv
 from pathlib import Path
@@ -25,7 +25,7 @@ def _numero(v):
 
 
 def comparar_automaticas(root):
-    """Retorna (comparacao_por_caso, resumo_por_versao) apenas se houver resultados reais.
+    """Retorna (comparacao_por_caso, resumo_por_versao) com resultados reais.
 
     Nao considera amostras transcritas de imagens como CSV integral.
     """
