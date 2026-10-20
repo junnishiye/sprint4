@@ -1,0 +1,6 @@
+Nomes: Davi Pacheco ; Gabriel Silveira ; João Vitor Jun ; Henrique Aragão ; André Félix
+RM's: 569487 ; 568910 ; 572079 ; 570529 ; 571691
+Turma: 1CCPQ
+
+link GitHub:
+https://github.com/junnishiye/sprint3/tree/main/prompt-artificial-intelligence
