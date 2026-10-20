@@ -50,11 +50,3 @@ As conclusões documentadas pela equipe na Sprint 03 mencionam ganhos de memóri
 
 Para auditar os casos mais controversos sem alterar resultados do juiz, uma **segunda leitura crítica assistida por IA** examinou 36 textos de resposta, especialmente F1, F2, F7, F11 e B3. Constatou-se que o juiz atribuiu zero a F7 apesar de RFID/aplicativo estarem na resposta; B3, por outro lado, representa uma falha clara do chatbot. As notas exploratórias de IA no apêndice são **pareceres adicionais, não notas humanas ou históricas**. Assim, o critério da rubrica de comparação com avaliação manual da Sprint 03 ainda pode ser interpretado como parcialmente atendido; nenhuma alegação falsa de avaliação humana foi adicionada.
 
-## Publicação, responsabilidade e segurança
-
-- Publicar o repositório **público** com todos os arquivos de código, dados, saídas e o PDF consolidado como tarefa principal; incluir a URL do repositório na entrega.
-- Os integrantes devem fazer seus **próprios commits**, distribuídos ao longo do trabalho. Não é possível fabricar retroativamente um histórico real de Git.
-- Nunca versionar credenciais de API. Usar Colab Secrets, variáveis de ambiente ou `.env` ignorado pelo Git. Não incluir `.env` nem chaves nos commits, inclusive históricos.
-- Toda revisão por IA está rotulada como tal. Uma pessoa que faça avaliação posterior deve assinar com nome, data e critérios, identificando corretamente que a avaliação foi realizada retrospectivamente.
-
-**Fonte de referência:** o projeto original das Sprints 01, 02 e 03, suas respostas e o ZIP da Sprint 04 realmente executada fornecidos pelo grupo. Não foram criados novos resultados de API nem alteradas as notas do juiz para melhorar artificialmente a pontuação.
